@@ -15,5 +15,4 @@ int main()
     int a;
     cin >> a;
     unordered_map<int,int> map;
-    map.
 }
