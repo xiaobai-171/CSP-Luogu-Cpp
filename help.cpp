@@ -36,6 +36,11 @@ int main()
     // cout << map['c'] << endl;
     /*map<char,int> 不存在键时，值默认为0*/
 
+    unordered_map<int,int> map;
+    map[1] =1;
+    map[2] = 2;
+    cout << map.find(1)->second << endl;
+
     /*---------------------------------------------------------*/
 
     // int i = 100;
