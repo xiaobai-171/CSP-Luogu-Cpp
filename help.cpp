@@ -2,6 +2,7 @@
 #include <vector>
 #include <algorithm>
 #include <unordered_map>
+#include <string>
 using namespace std;
 
 vector<int> f()
@@ -11,6 +12,15 @@ vector<int> f()
 
 int main()
 {
+    string str = to_string(-21474836);
+    reverse(str.begin(),str.end());
+    for(char ch:str){
+        cout << ch << " ";
+    }
+
+    cout << -13 % 10 << endl;
+    cout << atoi(str.c_str()) << endl;
+
     // vector<int> test = f();/*等价于test = {1,2,'2'};*/
     // cout << test[2] << endl;
     // vector<int> test = {1,2,'2'};
@@ -36,10 +46,11 @@ int main()
     // cout << map['c'] << endl;
     /*map<char,int> 不存在键时，值默认为0*/
 
-    unordered_map<int,int> map;
-    map[1] =1;
-    map[2] = 2;
-    cout << map.find(1)->second << endl;
+    // unordered_map<int,int> map;
+    // map[1] =1;
+    // map[2] = 2;
+    // cout << map.find(1)->second << endl;
+    /*map find返回迭代器（指针）*/
 
     /*---------------------------------------------------------*/
 
