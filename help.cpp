@@ -12,6 +12,15 @@ vector<int> f()
 
 int main()
 {
+    bool a[10][10] = { false };
+    for(int i=0;i<10;i++){
+        for(int j=0;j<10;j++){
+            cout << a[i][j] << " ";
+        }
+        cout << endl;
+    }
+    /*能够将数组全部初始化为0*/
+
     /*  
     string str = to_string(-21474836);
     /* - 2 1 4 7 4 8 3 6 -3 
