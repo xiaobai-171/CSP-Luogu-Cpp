@@ -12,14 +12,20 @@ vector<int> f()
 
 int main()
 {
+    /*  
     string str = to_string(-21474836);
-    reverse(str.begin(),str.end());
+    /* - 2 1 4 7 4 8 3 6 -3 
+    // reverse(str.begin(),str.end());
     for(char ch:str){
         cout << ch << " ";
     }
 
     cout << -13 % 10 << endl;
     cout << atoi(str.c_str()) << endl;
+    */
+    
+   /*string 函数中带有to_string、atoi 函数，to_string会将符号加进来。
+   atoi不能转换太大的int，转换是采取199->-200这样子的。  */
 
     // vector<int> test = f();/*等价于test = {1,2,'2'};*/
     // cout << test[2] << endl;
