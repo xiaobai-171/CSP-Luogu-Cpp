@@ -1,8 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <unordered_map>
-#include <string>
+#include <bits/stdc++.h>
 using namespace std;
 
 vector<int> f()
@@ -12,20 +8,52 @@ vector<int> f()
 
 int main()
 {
-    bool a[10][10] = { false };
-    for(int i=0;i<10;i++){
-        for(int j=0;j<10;j++){
-            cout << a[i][j] << " ";
-        }
-        cout << endl;
-    }
+
+    /*------------------------------------------------------*/
+    // cout << int(false) * int('1' - '0') << endl;
+    /*
+    false是0啊！！！什么鬼。。不是-1
+    */
+    
+    /*------------------------------------------------------*/
+
+    // if(isdigit('a')) {
+    //     cout << "isDigit !" << endl;
+    // }
+    // cout << 1'000 << endl;
+    /*判断给的字符是不是数字，原型是int isdigit ( int c );*/
+
+    /*-----------------------------------------------------*/
+
+    // string s = "123123";
+    // string::iterator it = s.begin()+ 2;
+    // s.push_back('4');
+    // cout << s << endl;
+    // cout << int(*it) - 48 << endl;
+    // vector<string>* vec = new vector<string>(4);
+    // cout << *vec << endl;
+    /*
+    结果为 s[2];
+    */
+
+    /*-----------------------------------------------------*/
+
+    // bool a[10][10] = { false };
+    // for(int i=0;i<10;i++){
+    //     for(int j=0;j<10;j++){
+    //         cout << a[i][j] << " ";
+    //     }
+    //     cout << endl;
+    // }
     /*能够将数组全部初始化为0*/
 
+    /*-----------------------------------------------------*/
+
     /*  
-    string str = to_string(-21474836);
+    string str = to_string(-21474836);    
     /* - 2 1 4 7 4 8 3 6 -3 
     // reverse(str.begin(),str.end());
-    for(char ch:str){
+    for(char ch:str) {
         cout << ch << " ";
     }
 
@@ -33,8 +61,10 @@ int main()
     cout << atoi(str.c_str()) << endl;
     */
     
-   /*string 函数中带有to_string、atoi 函数，to_string会将符号加进来。
-   atoi不能转换太大的int，转换是采取199->-200这样子的。  */
+    /*string 函数中带有to_string、atoi 函数，to_string会将符号加进来。
+    atoi不能转换太大的int，转换是采取199->-200这样子的。  */
+
+    /*-------------------------------------------------------*/
 
     // vector<int> test = f();/*等价于test = {1,2,'2'};*/
     // cout << test[2] << endl;
@@ -61,6 +91,8 @@ int main()
     // cout << map['c'] << endl;
     /*map<char,int> 不存在键时，值默认为0*/
 
+    /*--------------------------------------------------------*/
+
     // unordered_map<int,int> map;
     // map[1] =1;
     // map[2] = 2;
@@ -75,7 +107,9 @@ int main()
     /*结果为0*/
 
     /*----------------------------------------------------------*/
-    system("pause");                                                                                                                                                                                                                        
+    system("pause");    
+
+    return 0;                                                                                                                                                                                                                    
 }
 /*
 《编程之美》上这样说:
