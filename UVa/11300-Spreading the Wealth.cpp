@@ -1,36 +1,28 @@
 #include <iostream>
 #include <algorithm>
-#define MAX 100'0010
+#define MAX 1000010
 using namespace std;
 
-int Xi[MAX] = {0};
-int A[MAX] = {0};
-int M = 0;
-
-int X(int i){
-    int value = 0;
-    for(int j = 1;j <= i - 1;j++){
-        value += A[j];
-    }
-    return (i - 1) * M - value;
-}
-
+long long Xi[MAX];
+long long A[MAX];
+long long M;
 
 int main(){
     int n;
     while(scanf("%d", &n) == 1){
-        int ans = 0;
+        long long ans = 0;
         M = 0;
         for(int i = 1;i <= n;i++){
             scanf("%d", &A[i]);
             M += A[i];
         }
         M /= n;
-        for(int i = 1;i <= n;i++){
-            Xi[i] = X(i);
+        Xi[1] = 0;
+        for(int i = 2;i <= n;i++){
+            Xi[i] = Xi[i-1] + M - A[i-1]; 
         }
         sort(Xi+1,Xi+n+1);
-        int X1 = (Xi[(n+1)/2] + Xi[(n+1)/2]) / 2;
+        long long X1 = (Xi[(n+1)/2] + Xi[(n+1)/2]) / 2;
         for(int i = 1;i <= n;i++){
             ans += abs(X1 - Xi[i]);
         }
@@ -43,4 +35,5 @@ int main(){
 /*
 bug：1.M未置零
 2.数学表达式不正确，Xi应该是从1到n（包含）而不是2到n-1（包含）
+3.求Xi的方法太笨了，开销会很大的，别懒。
 */
